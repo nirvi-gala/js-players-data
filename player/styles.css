@@ -1,0 +1,5 @@
+.wrapper{width: 95%;margin: 0;}
+#players{display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; grid-gap: 1em;}
+#players .player{text-align: center;  border: 1px solid #ddd; padding: 15px; box-sizing: border-box;}
+#players .player img{width: 250px;}
+#players .player p{margin: auto;}
