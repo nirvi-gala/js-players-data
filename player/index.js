@@ -1,16 +1,18 @@
 let url = `https://api.npoint.io/d6bd0efc05639084eb17/`;
 
-getPlayerData(url);
+getPlayerData(url).then((data) => {
+    processPlayerData(data)
+});
 
 async function getPlayerData(url){
     try{
         let response = await fetch(url);
         let data = await response.json();
         if(data){
-            processPlayerData(data)
+            return data;
         }
     }catch(err){
-        processPlayerData(false);
+        return false;
     }    
 }
 
